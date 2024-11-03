@@ -1,0 +1,49 @@
+1 npm init -y (используется на старте проекта)
+
+The command npm init -y is a shortcut for initializing a new Node.js project with default settings.
+Here's a breakdown:
+npm init is used to create a package.json file, which is essential for managing a Node.js project's dependencies, scripts, metadata, and configurations.
+-y (or --yes) automatically fills out the package.json file with default values, so you don’t have to answer each setup prompt manually.
+When you run npm init -y, it creates a package.json file with typical default values like:
+
+{
+"name": "your-project-name",
+"version": "1.0.0",
+"description": "",
+"main": "index.js",
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+"keywords": [],
+"author": "",
+"license": \"ISC"
+}
+You can modify it later
+
+Second command:
+2 npm i --save-dev typescript 
+Это команда для скачивания typescript
+
+3. npx tsc --init
+This command creates tsconfig.json file
+You can uncomment what you need from the file
+
+4. create two folders: 
+src is for *.ts files
+./dest is for converted from *.ts -> *.js  
+
+5. write in package.json file in "scripts" new context: {
+"start": "tsc --watch"
+}
+This setting will automatically convert ts into js files
+when you run: npm start
+To place converted files inside "dest" folder you need to uncomment in tsconfig.json: "outDir": "./dest"  
+
+6 in html file add script tag and src = "should be the path to the converted js file"
+**********************************
+These were the commands to use when you have a small project. 
+
+But if you have to use JS libraries and they should be recognized in node_modules, then you should use a BUNDLER like 
+SNOWPACK, WEBPACK
+
+So to set the TS project with libraries other commands should be used. See COMPLEX TS PROJECT COMMANDS
