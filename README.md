@@ -27,7 +27,7 @@ This pre-project introduces additional commands and the use of Snowpack to manag
 ### Snowpack Setup
 To create a Snowpack project, use the following commands:
 
-```bash
+
 npx create-snowpack-app . --template @snowpack/app-template-blank-typescript --force
 
 
