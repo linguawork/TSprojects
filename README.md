@@ -35,6 +35,9 @@ Note: If the above command doesn’t work in the current directory, you can crea
 cd ..
 npx create-snowpack-app Pre-project2 --template @snowpack/app-template-blank-typescript
 
+---
+## Project 1: Simple To-Do List
+
 This project is a basic to-do list application intended to help familiarize yourself with TypeScript after working with JavaScript.
 Important Setup Details
 
@@ -64,11 +67,8 @@ TypeScript Configuration Error: To fix issues in tsconfig.json, consider adjusti
 
 json
 
-    "importsNotUsedAsValues": "error",
-    "verbatimModuleSyntax": true
-
-Feel free to modify or expand this structure as needed for each project!
-
+"importsNotUsedAsValues": "error",
+"verbatimModuleSyntax": true
 
 
 
