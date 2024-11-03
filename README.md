@@ -1,48 +1,67 @@
-# miniProjectsTS
-Every folder in this repo contains a project in Typescript.
-(Initially I thought to push a project into every branch of the repo, but decided to place them just into folders and make a descriptive README. This way it is simpler.)
+Typescript Projects Repository
 
-##Pre-project 1:
-The main idea here is to introduce basic commands to start a small TS project.
-All the commands are written in a txt file. 
+Every folder in this repository contains a standalone project written in TypeScript. Initially, I planned to use separate branches for each project but opted to organize them into folders instead, with a descriptive README for simplicity.
+Contents
 
-    P.S:
-    npm start in the folder of the project, not outside. 
-    When the page opens go to the directory: http://localhost:5500/*/
+    Pre-Project 1: Basic Commands for a TypeScript Project
+    Pre-Project 2: Introducing More Complex Commands and Snowpack
+    Project 1: Simple To-Do List
+
+Pre-Project 1: Basic Commands for a TypeScript Project
+
+This pre-project introduces the basic commands needed to start a small TypeScript project. All commands are documented in a text file within the folder.
+Running the Project
+
+    Run the project: Use npm start inside the project folder.
+    Access the project: Once started, open your browser and go to http://localhost:5500/ to view the project.
+
+Pre-Project 2: Introducing More Complex Commands and Snowpack
+
+This pre-project introduces additional commands and the use of Snowpack to manage JavaScript libraries, enabling more complex project structures. Commands are documented in a text file within the folder.
+Snowpack Setup
+
+To create a Snowpack project, use the following commands:
+
+npx create-snowpack-app . --template @snowpack/app-template-blank-typescript --force
 
 
-##Pre-project 2:
-The main idea of the project to introduce other commands that can help to create a more complex project including JS libraries. 
-Here Snowpack bundle is used. All the commands are written in a txt file. 
+Note: If the above command doesn’t work in the current directory, you can create a new project folder as follows:
 
-    (
-        npx create snowpack-app  . --template @snowpack/app-template-blank-typescript --force
-
-        #if it does start inside a folder with . , you may cd .. and create a project with a new folder:
-        npx create-snowpack-app Pre-project2 --template @snowpack/app-template-blank-typescript
-    )
+cd ..
+npx create-snowpack-app Pre-project2 --template @snowpack/app-template-blank-typescript
 
 
+Project 1: Simple To-Do List
 
-##Project 1: 
-A simple to-do list. The main purpose is to get used to coding in TS style after JS. 
+This project is a basic to-do list application intended to help familiarize yourself with TypeScript after working with JavaScript.
+Important Setup Details
 
-In html file dont forget to include the right src file inside script tag.
- <script src="./dist/index.js" type="module" ></script> 
-You will not see the dist folder in the project folder in the developer's mode. It is hidden.
-It will appear during build into production. 
+    HTML Configuration: Ensure the correct script source file is included in the HTML file:
+<script src="./dist/index.js" type="module"></script>
 
-You may delete in JSON the start options:
+
+Hidden dist Folder: The dist folder, where the project’s production build is stored, may not be visible in the project directory during development. It will appear during the build process.
+
+Optional JSON Cleanup: You may choose to delete the following entries in package.json if not needed:
+
 "test": "echo \"This template does not include a test runner by default.\" && exit 1",
-"format": "prettier --write \"src/**/*.{ts,js}\"",
-"lint": "prettier --check \"src/**/*.{ts,js}\""
+"format": "prettier --write \"src/**/*.ts,js\"",
+"lint": "prettier --check \"src/**/*.ts,js\""
 
 
-If GIT sees a folder as a file especially after deleting .git inside a project folder, it is recommended to clear the git cache. 
+Clearing Git Cache: If Git mistakenly identifies a folder as a file after deleting a .git folder inside a project directory, clear the cache with:
 
-Some error to fix inside tsconfig.json:
-    // "importsNotUsedAsValues": "error",
-    "verbatimModuleSyntax": true,
+git rm --cached -r .
+
+
+TypeScript Configuration Error: To fix issues in tsconfig.json, consider adjusting the following settings:
+
+json
+
+    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true
+
+
 
 
 
