@@ -1,0 +1,38 @@
+npx create snowpack-app  . --template @snowpack/app-template-blank-typescript --force
+
+#if it does start inside a folder with . , you may cd .. and create a project with a new folder:
+npx create-snowpack-app Pre-project2 --template @snowpack/app-template-blank-typescript
+
+--force если нужно открыть в той же папке
+
+Run the command and you will download all the dependencies for the project and of course the BUNDLER: SNOWPACK
+
+Let's break down each part of the command:
+
+npx:
+npx is a tool that comes with npm (starting from version 5.2) and allows you to run Node.js packages without having to install them globally on your system. 
+Here, it temporarily downloads and runs the create-snowpack-app package to set up a new Snowpack project.
+
+create-snowpack-app:
+This is a package specifically designed to initialize (or "create") a new Snowpack application. Snowpack is a modern build tool for frontend development, optimized for speed and simplicity. This package generates the basic project structure and configuration files for a Snowpack application.
+
+.:
+This dot represents the current directory. By providing . as an argument, you're telling the create-snowpack-app command to create the new Snowpack application in the current directory, rather than in a new folder.
+
+--template:
+This flag specifies the template to use when creating the project. 
+A template provides pre-configured files and settings to quickly set up a project with specific languages, frameworks, or settings.
+
+@snowpack/app-template-blank-typescript:
+This is the name of the template. @snowpack/app-template-blank-typescript is a specific template provided by Snowpack.
+"blank" means it's a minimal template, giving you only the essentials, without any additional dependencies or features.
+"typescript" indicates that this template is set up for TypeScript, so your new project will be pre-configured to support TypeScript code.
+
+
+Summary: The command initializes a new Snowpack project in the current directory, using a minimal (blank) template that is configured for TypeScript.
+
+You may delete in JSON
+"test": "echo \"This template does not include a test runner by default.\" && exit 1",
+"format": "prettier --write \"src/**/*.{ts,js}\"",
+"lint": "prettier --check \"src/**/*.{ts,js}\""
+
