@@ -22,3 +22,9 @@ Your app is ready to be deployed!
 ### Q: What about Eject?
 
 No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+
+
+### : After cloning do not forget to reinstall snowpack in the folder:
+npm install snowpack --save-dev
+It is a part of .gitignore
+
