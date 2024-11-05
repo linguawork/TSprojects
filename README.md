@@ -15,8 +15,8 @@ Every folder in this repository contains a standalone project written in TypeScr
 This pre-project introduces the basic commands needed to start a small TypeScript project. All commands are documented in a text file within the folder.
 
 ### Running the Project
-- **Run the project**: Use `npm start` **inside the project folder**.
-- **Access the project**: Once started, open your browser and go to [http://localhost:5500/](http://localhost:5500/) to view the project.
+- **Run the project**: Use `npm start` inside the project folder.
+- *Access the project*: Once started, open your browser and go to [http://localhost:5500/](http://localhost:5500/) to view the project.
 
 ---
 
@@ -83,5 +83,7 @@ To fix issues in tsconfig.json, consider adjusting the following settings:
 
 After cloning do not forget to re-install Snowpack dependences:
 ```bash
+npm install snowpack --save-dev
 
+npm start
 ```
