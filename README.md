@@ -1,3 +1,5 @@
+[Typescript image](https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg)
+
 # Typescript Projects Repository
 
 Every folder in this repository contains a standalone project written in TypeScript. Initially, I planned to use separate branches for each project but opted to organize them into folders instead, with a descriptive README for simplicity.
@@ -82,7 +84,7 @@ To fix issues in tsconfig.json, consider adjusting the following settings:
 ```
 
 After cloning do not forget to re-install Snowpack dependences:
-```bash
+```bash 
 npm install snowpack --save-dev
 
 npm start
