@@ -85,6 +85,6 @@ To fix issues in tsconfig.json, consider adjusting the following settings:
 
 After cloning do not forget to re-install Snowpack dependences:
 ```bash
-
+npm install snowpack --save-dev
 npm start
 ```
