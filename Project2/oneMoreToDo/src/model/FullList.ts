@@ -28,6 +28,23 @@ export default class FullList implements List{
 
     //stopped here
     load():void{
+        //giving  a type and getting a list from a storage
+        const storedList: string | null = localStorage.getItem("myList")
+        if(typeof storedList !== "string") return
+
+        //giving a type of array of Objects and parsing the list
+        const parsedList: {_id:string, _item:string, _checked:boolean}[] =
+        JSON.parse(storedList)  
+        
+        //running through array and creating a newListItem for every element and adding it to FullList
+        parsedList.forEach(itemObj => {
+            const newListItem = new ListItem(itemObj._id, itemObj._item, itemObj._checked)
+            
+            //this is a static method
+            FullList.instance.addItem(newListItem)
+        }
+
+        )
 
     } 
 
